@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#070808">
+<title>Spawn Pad</title>
+<meta name="description" content="Launch, trade and discover tokens on Solana.">
+<meta property="og:title" content="Spawn Pad"><meta property="og:description" content="Launch, trade and discover tokens on Solana.">
+<meta property="og:image" content="/assets/logo.webp"><meta name="twitter:card" content="summary">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="/styles.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap"><div class="nav-in">
+    <a class="logo" href="#/" aria-label="Spawn Pad home"><img src="/assets/logo-mark.webp" alt=""><span>SPAWN<b>PAD</b></span></a>
+    <nav class="links" id="navLinks" aria-label="Primary"><a href="#/" data-r="home">Explore</a><a href="#/trending" data-r="trending">Trending</a><a href="#/migrated" data-r="migrated">Migrated</a></nav>
+    <div class="nav-r">
+      <div class="sbox d" id="sboxD"><label class="sr" for="qD">Search tokens</label>
+        <div class="field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="qD" placeholder="Search name, ticker or address" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="popD"></div>
+        <div class="pop" id="popD" role="listbox" hidden></div></div>
+      <button class="btn ibtn only-m" id="searchBtn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <div style="position:relative"><button class="btn" id="walletBtn">Connect Wallet</button><div class="menu" id="walletMenu" hidden role="menu"></div></div>
+      <a class="btn btn-p hide-m" href="#/launch">Launch</a>
+      <button class="btn ibtn only-m" id="menuBtn" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div></div>
+</header>
+<main class="wrap" id="view"></main>
+<footer class="foot"><div class="wrap"><span>Spawn Pad</span><span>Trades settle on Solana. Your wallet signs every transaction.</span></div></footer>
+<div id="toasts" role="status" aria-live="polite"></div>
+<div id="overlay"></div>
+<script src="/config.js"></script>
+<script src="/launch-sdk.bundle.js" defer></script>
+<script src="/app.js" defer></script>
+</body>
+</html>
